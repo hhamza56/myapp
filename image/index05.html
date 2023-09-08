@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input First Name and Last Name</title>
+</head>
+<body>
+
+
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Navbar Example</title>
+    <style>
+        /* Basic CSS for styling the navbar */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        li.nav-item {
+            float: left;
+        }
+
+        li.nav-item a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li.nav-item a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar container -->
+    <ul class="navbar">
+        <li class="nav-item"><a href="#" id="home">Home</a></li>
+        <li class="nav-item"><a href="#" id="about">About</a></li>
+        <li class="nav-item"><a href="#" id="contact">Contact</a></li>
+    </ul>
+
+    <!-- Content area -->
+    <div id="content">
+        <h1>Welcome to the Home Page</h1>
+        <p>This is the home page content.</p>
+    </div>
+
+    <script>
+        // JavaScript to handle navbar clicks and dynamic content
+        var homeLink = document.getElementById("home");
+        var aboutLink = document.getElementById("about");
+        var contactLink = document.getElementById("contact");
+        var contentDiv = document.getElementById("content");
+
+        homeLink.addEventListener("click", function() {
+            contentDiv.innerHTML = "<h1>Welcome to the Home Page</h1><p>This is the home page content.</p>";
+        });
+
+        aboutLink.addEventListener("click", function() {
+            contentDiv.innerHTML = "<h1>About Us</h1><p>We are a dynamic company.</p>";
+        });
+
+        contactLink.addEventListener("click", function() {
+            contentDiv.innerHTML = "<h1>Contact Us</h1><p>You can reach us at example@example.com.</p>";
+        });
+    </script>
+</body>
+</html>
+
+    <form id="nameForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+<!-- 
+    <script>
+        // Get a reference to the form element
+        var nameForm = document.getElementById("nameForm");
+
+        // Add an event listener for form submission
+        nameForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the values entered by the user
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+
+            // Display a greeting using the entered names
+            console.log("Hello, " + firstName + " " + lastName + "!");
+        });
+    </script> -->
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>3D Logo Example</title>
+    <style>
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Set up a scene, camera, and renderer
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Create a cube and add it to the scene
+        var geometry = new THREE.BoxGeometry();
+        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        var cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        // Position the camera
+        camera.position.z = 5;
+
+        // Create an animation loop
+        var animate = function () {
+            requestAnimationFrame(animate);
+
+            // Rotate the cube
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+        };
+
+        // Start the animation loop
+        animate();
+    </script>
+</body>
+</html>
+
+
+    <script src="apps.js"></script>
+
+</body>
+</html>
